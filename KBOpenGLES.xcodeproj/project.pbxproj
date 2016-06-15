@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2E0E6241D118C4C007E37FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E6231D118C4C007E37FE /* main.m */; };
+		B2E0E6271D118C4C007E37FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E6261D118C4C007E37FE /* AppDelegate.m */; };
+		B2E0E62A1D118C4C007E37FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E6291D118C4C007E37FE /* ViewController.m */; };
+		B2E0E62D1D118C4C007E37FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E0E62B1D118C4C007E37FE /* Main.storyboard */; };
+		B2E0E62F1D118C4C007E37FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E0E62E1D118C4C007E37FE /* Assets.xcassets */; };
+		B2E0E6321D118C4C007E37FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E0E6301D118C4C007E37FE /* LaunchScreen.storyboard */; };
+		B2E0E63D1D118C4C007E37FE /* KBOpenGLESTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E63C1D118C4C007E37FE /* KBOpenGLESTests.m */; };
+		B2E0E6481D118C4C007E37FE /* KBOpenGLESUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E6471D118C4C007E37FE /* KBOpenGLESUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2E0E6391D118C4C007E37FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2E0E6171D118C4C007E37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2E0E61E1D118C4C007E37FE;
+			remoteInfo = KBOpenGLES;
+		};
+		B2E0E6441D118C4C007E37FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2E0E6171D118C4C007E37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2E0E61E1D118C4C007E37FE;
+			remoteInfo = KBOpenGLES;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2E0E61F1D118C4C007E37FE /* KBOpenGLES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBOpenGLES.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E0E6231D118C4C007E37FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2E0E6251D118C4C007E37FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B2E0E6261D118C4C007E37FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B2E0E6281D118C4C007E37FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B2E0E6291D118C4C007E37FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B2E0E62C1D118C4C007E37FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2E0E62E1D118C4C007E37FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2E0E6311D118C4C007E37FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2E0E6331D118C4C007E37FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2E0E6381D118C4C007E37FE /* KBOpenGLESTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KBOpenGLESTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E0E63C1D118C4C007E37FE /* KBOpenGLESTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBOpenGLESTests.m; sourceTree = "<group>"; };
+		B2E0E63E1D118C4C007E37FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2E0E6431D118C4C007E37FE /* KBOpenGLESUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KBOpenGLESUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E0E6471D118C4C007E37FE /* KBOpenGLESUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBOpenGLESUITests.m; sourceTree = "<group>"; };
+		B2E0E6491D118C4C007E37FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2E0E61C1D118C4C007E37FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2E0E6351D118C4C007E37FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2E0E6401D118C4C007E37FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2E0E6161D118C4C007E37FE = {
+			isa = PBXGroup;
+			children = (
+				B2E0E6211D118C4C007E37FE /* KBOpenGLES */,
+				B2E0E63B1D118C4C007E37FE /* KBOpenGLESTests */,
+				B2E0E6461D118C4C007E37FE /* KBOpenGLESUITests */,
+				B2E0E6201D118C4C007E37FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2E0E6201D118C4C007E37FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0E61F1D118C4C007E37FE /* KBOpenGLES.app */,
+				B2E0E6381D118C4C007E37FE /* KBOpenGLESTests.xctest */,
+				B2E0E6431D118C4C007E37FE /* KBOpenGLESUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2E0E6211D118C4C007E37FE /* KBOpenGLES */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0E6251D118C4C007E37FE /* AppDelegate.h */,
+				B2E0E6261D118C4C007E37FE /* AppDelegate.m */,
+				B2E0E6281D118C4C007E37FE /* ViewController.h */,
+				B2E0E6291D118C4C007E37FE /* ViewController.m */,
+				B2E0E62B1D118C4C007E37FE /* Main.storyboard */,
+				B2E0E62E1D118C4C007E37FE /* Assets.xcassets */,
+				B2E0E6301D118C4C007E37FE /* LaunchScreen.storyboard */,
+				B2E0E6331D118C4C007E37FE /* Info.plist */,
+				B2E0E6221D118C4C007E37FE /* Supporting Files */,
+			);
+			path = KBOpenGLES;
+			sourceTree = "<group>";
+		};
+		B2E0E6221D118C4C007E37FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0E6231D118C4C007E37FE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2E0E63B1D118C4C007E37FE /* KBOpenGLESTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0E63C1D118C4C007E37FE /* KBOpenGLESTests.m */,
+				B2E0E63E1D118C4C007E37FE /* Info.plist */,
+			);
+			path = KBOpenGLESTests;
+			sourceTree = "<group>";
+		};
+		B2E0E6461D118C4C007E37FE /* KBOpenGLESUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0E6471D118C4C007E37FE /* KBOpenGLESUITests.m */,
+				B2E0E6491D118C4C007E37FE /* Info.plist */,
+			);
+			path = KBOpenGLESUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2E0E61E1D118C4C007E37FE /* KBOpenGLES */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2E0E64C1D118C4C007E37FE /* Build configuration list for PBXNativeTarget "KBOpenGLES" */;
+			buildPhases = (
+				B2E0E61B1D118C4C007E37FE /* Sources */,
+				B2E0E61C1D118C4C007E37FE /* Frameworks */,
+				B2E0E61D1D118C4C007E37FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KBOpenGLES;
+			productName = KBOpenGLES;
+			productReference = B2E0E61F1D118C4C007E37FE /* KBOpenGLES.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2E0E6371D118C4C007E37FE /* KBOpenGLESTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2E0E64F1D118C4C007E37FE /* Build configuration list for PBXNativeTarget "KBOpenGLESTests" */;
+			buildPhases = (
+				B2E0E6341D118C4C007E37FE /* Sources */,
+				B2E0E6351D118C4C007E37FE /* Frameworks */,
+				B2E0E6361D118C4C007E37FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2E0E63A1D118C4C007E37FE /* PBXTargetDependency */,
+			);
+			name = KBOpenGLESTests;
+			productName = KBOpenGLESTests;
+			productReference = B2E0E6381D118C4C007E37FE /* KBOpenGLESTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B2E0E6421D118C4C007E37FE /* KBOpenGLESUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2E0E6521D118C4C007E37FE /* Build configuration list for PBXNativeTarget "KBOpenGLESUITests" */;
+			buildPhases = (
+				B2E0E63F1D118C4C007E37FE /* Sources */,
+				B2E0E6401D118C4C007E37FE /* Frameworks */,
+				B2E0E6411D118C4C007E37FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2E0E6451D118C4C007E37FE /* PBXTargetDependency */,
+			);
+			name = KBOpenGLESUITests;
+			productName = KBOpenGLESUITests;
+			productReference = B2E0E6431D118C4C007E37FE /* KBOpenGLESUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2E0E6171D118C4C007E37FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = feng;
+				TargetAttributes = {
+					B2E0E61E1D118C4C007E37FE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					B2E0E6371D118C4C007E37FE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B2E0E61E1D118C4C007E37FE;
+					};
+					B2E0E6421D118C4C007E37FE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B2E0E61E1D118C4C007E37FE;
+					};
+				};
+			};
+			buildConfigurationList = B2E0E61A1D118C4C007E37FE /* Build configuration list for PBXProject "KBOpenGLES" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2E0E6161D118C4C007E37FE;
+			productRefGroup = B2E0E6201D118C4C007E37FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2E0E61E1D118C4C007E37FE /* KBOpenGLES */,
+				B2E0E6371D118C4C007E37FE /* KBOpenGLESTests */,
+				B2E0E6421D118C4C007E37FE /* KBOpenGLESUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2E0E61D1D118C4C007E37FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E0E6321D118C4C007E37FE /* LaunchScreen.storyboard in Resources */,
+				B2E0E62F1D118C4C007E37FE /* Assets.xcassets in Resources */,
+				B2E0E62D1D118C4C007E37FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2E0E6361D118C4C007E37FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2E0E6411D118C4C007E37FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2E0E61B1D118C4C007E37FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E0E62A1D118C4C007E37FE /* ViewController.m in Sources */,
+				B2E0E6271D118C4C007E37FE /* AppDelegate.m in Sources */,
+				B2E0E6241D118C4C007E37FE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2E0E6341D118C4C007E37FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E0E63D1D118C4C007E37FE /* KBOpenGLESTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2E0E63F1D118C4C007E37FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E0E6481D118C4C007E37FE /* KBOpenGLESUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2E0E63A1D118C4C007E37FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2E0E61E1D118C4C007E37FE /* KBOpenGLES */;
+			targetProxy = B2E0E6391D118C4C007E37FE /* PBXContainerItemProxy */;
+		};
+		B2E0E6451D118C4C007E37FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2E0E61E1D118C4C007E37FE /* KBOpenGLES */;
+			targetProxy = B2E0E6441D118C4C007E37FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2E0E62B1D118C4C007E37FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2E0E62C1D118C4C007E37FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2E0E6301D118C4C007E37FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2E0E6311D118C4C007E37FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2E0E64A1D118C4C007E37FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B2E0E64B1D118C4C007E37FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2E0E64D1D118C4C007E37FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KBOpenGLES/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3glasses.KBOpenGLES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B2E0E64E1D118C4C007E37FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KBOpenGLES/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3glasses.KBOpenGLES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B2E0E6501D118C4C007E37FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KBOpenGLESTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3glasses.KBOpenGLESTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KBOpenGLES.app/KBOpenGLES";
+			};
+			name = Debug;
+		};
+		B2E0E6511D118C4C007E37FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KBOpenGLESTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3glasses.KBOpenGLESTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KBOpenGLES.app/KBOpenGLES";
+			};
+			name = Release;
+		};
+		B2E0E6531D118C4C007E37FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KBOpenGLESUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3glasses.KBOpenGLESUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KBOpenGLES;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B2E0E6541D118C4C007E37FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KBOpenGLESUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3glasses.KBOpenGLESUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KBOpenGLES;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2E0E61A1D118C4C007E37FE /* Build configuration list for PBXProject "KBOpenGLES" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2E0E64A1D118C4C007E37FE /* Debug */,
+				B2E0E64B1D118C4C007E37FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2E0E64C1D118C4C007E37FE /* Build configuration list for PBXNativeTarget "KBOpenGLES" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2E0E64D1D118C4C007E37FE /* Debug */,
+				B2E0E64E1D118C4C007E37FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B2E0E64F1D118C4C007E37FE /* Build configuration list for PBXNativeTarget "KBOpenGLESTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2E0E6501D118C4C007E37FE /* Debug */,
+				B2E0E6511D118C4C007E37FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B2E0E6521D118C4C007E37FE /* Build configuration list for PBXNativeTarget "KBOpenGLESUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2E0E6531D118C4C007E37FE /* Debug */,
+				B2E0E6541D118C4C007E37FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2E0E6171D118C4C007E37FE /* Project object */;
+}
