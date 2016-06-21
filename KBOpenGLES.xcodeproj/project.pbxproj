@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C377D871D18DDFB001079C7 /* KBOpenglView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C377D861D18DDFB001079C7 /* KBOpenglView.m */; };
+		4C377D8A1D18DE7D001079C7 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C377D891D18DE7D001079C7 /* GLProgram.m */; };
+		4C377D8E1D18DF1F001079C7 /* 1234.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C377D8B1D18DF1F001079C7 /* 1234.jpg */; };
+		4C377D8F1D18DF1F001079C7 /* Frag3_0.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4C377D8C1D18DF1F001079C7 /* Frag3_0.fsh */; };
+		4C377D901D18DF1F001079C7 /* Vertex3_0.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4C377D8D1D18DF1F001079C7 /* Vertex3_0.vsh */; };
+		4C377D931D195127001079C7 /* wall.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 4C377D921D195127001079C7 /* wall.bmp */; };
+		4C377D951D19528C001079C7 /* 2345.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C377D941D19528C001079C7 /* 2345.png */; };
 		B2E0E6241D118C4C007E37FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E6231D118C4C007E37FE /* main.m */; };
 		B2E0E6271D118C4C007E37FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E6261D118C4C007E37FE /* AppDelegate.m */; };
 		B2E0E62A1D118C4C007E37FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E6291D118C4C007E37FE /* ViewController.m */; };
@@ -35,6 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C377D851D18DDFB001079C7 /* KBOpenglView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBOpenglView.h; sourceTree = "<group>"; };
+		4C377D861D18DDFB001079C7 /* KBOpenglView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBOpenglView.m; sourceTree = "<group>"; };
+		4C377D881D18DE7D001079C7 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
+		4C377D891D18DE7D001079C7 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
+		4C377D8B1D18DF1F001079C7 /* 1234.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1234.jpg; sourceTree = "<group>"; };
+		4C377D8C1D18DF1F001079C7 /* Frag3_0.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Frag3_0.fsh; sourceTree = "<group>"; };
+		4C377D8D1D18DF1F001079C7 /* Vertex3_0.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Vertex3_0.vsh; sourceTree = "<group>"; };
+		4C377D921D195127001079C7 /* wall.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = wall.bmp; sourceTree = "<group>"; };
+		4C377D941D19528C001079C7 /* 2345.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2345.png; sourceTree = "<group>"; };
 		B2E0E61F1D118C4C007E37FE /* KBOpenGLES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBOpenGLES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E0E6231D118C4C007E37FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2E0E6251D118C4C007E37FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +121,8 @@
 				B2E0E6261D118C4C007E37FE /* AppDelegate.m */,
 				B2E0E6281D118C4C007E37FE /* ViewController.h */,
 				B2E0E6291D118C4C007E37FE /* ViewController.m */,
+				4C377D851D18DDFB001079C7 /* KBOpenglView.h */,
+				4C377D861D18DDFB001079C7 /* KBOpenglView.m */,
 				B2E0E62B1D118C4C007E37FE /* Main.storyboard */,
 				B2E0E62E1D118C4C007E37FE /* Assets.xcassets */,
 				B2E0E6301D118C4C007E37FE /* LaunchScreen.storyboard */,
@@ -117,6 +135,13 @@
 		B2E0E6221D118C4C007E37FE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C377D941D19528C001079C7 /* 2345.png */,
+				4C377D921D195127001079C7 /* wall.bmp */,
+				4C377D8B1D18DF1F001079C7 /* 1234.jpg */,
+				4C377D8C1D18DF1F001079C7 /* Frag3_0.fsh */,
+				4C377D8D1D18DF1F001079C7 /* Vertex3_0.vsh */,
+				4C377D881D18DE7D001079C7 /* GLProgram.h */,
+				4C377D891D18DE7D001079C7 /* GLProgram.m */,
 				B2E0E6231D118C4C007E37FE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -244,7 +269,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E0E6321D118C4C007E37FE /* LaunchScreen.storyboard in Resources */,
+				4C377D951D19528C001079C7 /* 2345.png in Resources */,
+				4C377D8E1D18DF1F001079C7 /* 1234.jpg in Resources */,
+				4C377D901D18DF1F001079C7 /* Vertex3_0.vsh in Resources */,
+				4C377D8F1D18DF1F001079C7 /* Frag3_0.fsh in Resources */,
 				B2E0E62F1D118C4C007E37FE /* Assets.xcassets in Resources */,
+				4C377D931D195127001079C7 /* wall.bmp in Resources */,
 				B2E0E62D1D118C4C007E37FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +302,8 @@
 			files = (
 				B2E0E62A1D118C4C007E37FE /* ViewController.m in Sources */,
 				B2E0E6271D118C4C007E37FE /* AppDelegate.m in Sources */,
+				4C377D8A1D18DE7D001079C7 /* GLProgram.m in Sources */,
+				4C377D871D18DDFB001079C7 /* KBOpenglView.m in Sources */,
 				B2E0E6241D118C4C007E37FE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KBOpenGLES/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3glasses.KBOpenGLES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KBOpenGLES/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3glasses.KBOpenGLES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +530,7 @@
 				B2E0E64E1D118C4C007E37FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2E0E64F1D118C4C007E37FE /* Build configuration list for PBXNativeTarget "KBOpenGLESTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +539,7 @@
 				B2E0E6511D118C4C007E37FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2E0E6521D118C4C007E37FE /* Build configuration list for PBXNativeTarget "KBOpenGLESUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +548,7 @@
 				B2E0E6541D118C4C007E37FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
