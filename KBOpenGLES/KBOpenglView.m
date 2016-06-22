@@ -99,7 +99,7 @@
 
     [displayProgram use];
     
-    cameraPos = GLKVector3Make(0, 0, 1);
+    cameraPos = GLKVector3Make(0, 0, 2);
     cameraFront = GLKVector3Make(0, 0, -1);
     cameraUp = GLKVector3Make(0, 1, 0);
 
@@ -107,7 +107,7 @@
     static GLfloat vertices[] = {
         // Positions          // Colors           // Texture Coords
         0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // Top Right
-        0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 1.0f, // Bottom Right
+        0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f, // Bottom Right
         -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // Bottom Left
         -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // Top Left
     };
@@ -227,7 +227,7 @@
     
     [EAGLContext setCurrentContext:context];
     
-//    glBindFramebuffer(GL_FRAMEBUFFER, displayFramebuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, displayFramebuffer);
     
     glViewport(0, 0, sizeInPixels.width, sizeInPixels.height);
     
@@ -235,10 +235,16 @@
     glClear(GL_COLOR_BUFFER_BIT );
     
     glActiveTexture(GL_TEXTURE4);
+    
+    
     glBindTexture(GL_TEXTURE_2D, texture);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// Set texture wrapping to GL_REPEAT (usually basic wrapping method)
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
     GLKMatrix4 model = GLKMatrix4Identity;
-//    model = GLKMatrix4RotateZ(model, GLKMathDegreesToRadians(180));
+    model = GLKMatrix4RotateZ(model, GLKMathDegreesToRadians(180));
     
     GLKMatrix4 viewM = GLKMatrix4Identity;
     
@@ -258,17 +264,17 @@
     center.y = 0.5;
     glUniform2fv(centerUniform, 1, center.v);
     glUniform1f(aspectRatioUniform, pixelsWideSize.width/pixelsWideSize.height);
-//    glUniform1f(fsUniform, cRoll);
-//    glUniform1f(fxUniform, cYaw);
+    glUniform1f(fsUniform, cRoll);
+    glUniform1f(fxUniform, cYaw);
 
-//    GLKVector3 front;
-//    front.y = cos(cYaw)*cos(cRoll);
-//    front.x = sin(cYaw)*sin(cRoll);
-//    front.z = -1;
+    GLKVector3 front;
+    front.y = cos(cYaw)*cos(cRoll);
+    front.x = sin(cYaw)*sin(cRoll);
+    front.z = -1;
     
     
     
-//    cameraFront = GLKVector3Normalize(front);
+    cameraFront = GLKVector3Normalize(front);
     GLKVector3 cameraTarget = GLKVector3Add(cameraPos, cameraFront);
     
     
@@ -279,7 +285,7 @@
     glUniformMatrix4fv(projUniform, 1, GL_FALSE, projection.m);
 
     glBindVertexArrayOES(VAO);
-    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLE_STRIP, 6, GL_UNSIGNED_INT, 0);
 //    glBindVertexArrayOES(0);
     [self presentFramebuffer];
     
@@ -293,8 +299,8 @@
     
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// Set texture wrapping to GL_REPEAT (usually basic wrapping method)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     
     void *bitmapData;
     size_t pixelsWide;
@@ -305,7 +311,6 @@
     bitmapData = NULL;
     glBindTexture(GL_TEXTURE_2D, 0);
     pixelsWideSize = CGSizeMake(pixelsWide, pixelsHigh);
-//    [self newFrameReadyAtTime:texture];
     return texture;
 }
 
