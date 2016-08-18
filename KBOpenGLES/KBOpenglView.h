@@ -16,7 +16,7 @@
 
 -(GLuint)rendImage:(UIImage *)image;
 
-- (void)newFrameReadyAtTime:(GLuint)texture;
+- (void)newFrameReadyAtTime:(GLuint)texture text2:(GLuint)texture2;
 
 -(void)refreshFrame;
 

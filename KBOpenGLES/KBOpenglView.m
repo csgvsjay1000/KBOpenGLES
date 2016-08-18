@@ -27,6 +27,8 @@
     CGSize pixelsWideSize;
     
     GLuint VBO, VAO, EBO;
+    GLuint VBO_1, VAO_1, EBO_1;
+
     GLKVector3 cameraPos,cameraFront,cameraUp;
 }
 
@@ -99,9 +101,7 @@
 
     [displayProgram use];
     
-    cameraPos = GLKVector3Make(0, 0, 2);
-    cameraFront = GLKVector3Make(0, 0, -1);
-    cameraUp = GLKVector3Make(0, 1, 0);
+    
 
     // Set up vertex data (and buffer(s)) and attribute pointers
     static GLfloat vertices[] = {
@@ -131,18 +131,20 @@
     // Position attribute
     glVertexAttribPointer(displayPositionAttribute, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(displayPositionAttribute);
-    // Color attribute
-//    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
-//    glEnableVertexAttribArray(1);
-    // TexCoord attribute
     glVertexAttribPointer(displayTextureCoordinateAttribute, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
     glEnableVertexAttribArray(displayTextureCoordinateAttribute);
-//    glEnableVertexAttribArray(displayPositionAttribute);
-//    glEnableVertexAttribArray(displayTextureCoordinateAttribute);
     glBindVertexArrayOES(0);
     
     
     glUniform1i(displayInputTextureUniform, 4);
+    
+    static GLfloat vertices_1[] = {
+        // Positions          // Colors           // Texture Coords
+        0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // Top Right
+        0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f, // Bottom Right
+        -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // Bottom Left
+        -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // Top Left
+    };
 
 
     
@@ -223,7 +225,7 @@
 
 #pragma mark GPUInput protocol
 
-- (void)newFrameReadyAtTime:(GLuint)texture{
+- (void)newFrameReadyAtTime:(GLuint)texture text2:(GLuint)texture2{
     
     [EAGLContext setCurrentContext:context];
     
@@ -243,19 +245,29 @@
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
+    CMDeviceMotion *d = _motionManager.deviceMotion;
+    CMAttitude *attitude = d.attitude;
+    double cYaw = attitude.yaw;
+    double cRoll = attitude.roll;
+    
     GLKMatrix4 model = GLKMatrix4Identity;
     model = GLKMatrix4RotateZ(model, GLKMathDegreesToRadians(180));
+    model = GLKMatrix4RotateX(model, GLKMathDegreesToRadians(20));
     
+    model = GLKMatrix4RotateZ(model, cYaw);
+
+    model = GLKMatrix4Translate(model, 0, 0.3, 0);
+
     GLKMatrix4 viewM = GLKMatrix4Identity;
     
     GLKMatrix4 projection = GLKMatrix4Identity;
     projection = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(45), sizeInPixels.width/sizeInPixels.height, 0.1, 100);
 
     
-    CMDeviceMotion *d = _motionManager.deviceMotion;
-    CMAttitude *attitude = d.attitude;
-    double cYaw = attitude.yaw;
-    double cRoll = attitude.roll;
+    
+    
+
+    
     float degress_x = GLKMathRadiansToDegrees(cRoll); //对Y轴旋转
     float degress_y = GLKMathRadiansToDegrees(cYaw);  //对x轴旋转
     
@@ -267,14 +279,26 @@
     glUniform1f(fsUniform, cRoll);
     glUniform1f(fxUniform, cYaw);
 
-    GLKVector3 front;
-    front.y = cos(cYaw)*cos(cRoll);
-    front.x = sin(cYaw)*sin(cRoll);
-    front.z = -1;
+//    GLKVector3 front;
+//    front.x = cos(cYaw)*cos(cRoll);
+//    front.y = sin(cYaw)*sin(cRoll);
+//    front.z = -1;
+//    
+//    
+//    
+//    cameraFront = GLKVector3Normalize(front);
+    cameraPos = GLKVector3Make(-0, -1, cRoll);
+    cameraFront = GLKVector3Make(0, 1, -cRoll);
+
+//    cameraPos = GLKVector3Make(-cYaw, -1, 1);
+//    cameraFront = GLKVector3Make(cYaw, 1, -1);
     
+    float a = 1,b = 1,c;
     
+    GLKVector3 temp = GLKVector3Make(1, 0, 0);
     
-    cameraFront = GLKVector3Normalize(front);
+    cameraUp = GLKVector3CrossProduct(temp, cameraFront);
+    
     GLKVector3 cameraTarget = GLKVector3Add(cameraPos, cameraFront);
     
     
@@ -286,7 +310,48 @@
 
     glBindVertexArrayOES(VAO);
     glDrawElements(GL_TRIANGLE_STRIP, 6, GL_UNSIGNED_INT, 0);
-//    glBindVertexArrayOES(0);
+    glBindVertexArrayOES(0);
+    
+    
+    glBindVertexArrayOES(VAO);
+    
+    glBindTexture(GL_TEXTURE_2D, texture2);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// Set texture wrapping to GL_REPEAT (usually basic wrapping method)
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    
+    model = GLKMatrix4Identity;
+    model = GLKMatrix4RotateZ(model, GLKMathDegreesToRadians(180));
+    model = GLKMatrix4Translate(model, 0, -0.3-(cRoll/10.0), 0);
+    model = GLKMatrix4RotateX(model, GLKMathDegreesToRadians(-25));
+
+    viewM = GLKMatrix4Identity;
+    
+    projection = GLKMatrix4Identity;
+    
+    cameraPos = GLKVector3Make(0, 0, 2.0+cRoll*3);
+    cameraFront = GLKVector3Make(0, 0, -(2.0+cRoll*3));
+    
+    temp = GLKVector3Make(1, 0, 0);
+    
+    cameraUp = GLKVector3CrossProduct(temp, cameraFront);
+    
+    cameraTarget = GLKVector3Add(cameraPos, cameraFront);
+    
+    
+    viewM = GLKMatrix4MakeLookAt(cameraPos.x, cameraPos.y, cameraPos.z, cameraTarget.x, cameraTarget.y, cameraTarget.z, cameraUp.x, cameraUp.y, cameraUp.z);
+    
+    projection = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(45), sizeInPixels.width/sizeInPixels.height, 0.1, 100);
+    
+    glUniformMatrix4fv(modelUniform, 1, GL_FALSE, model.m);
+    glUniformMatrix4fv(viewUniform, 1, GL_FALSE, viewM.m);
+    glUniformMatrix4fv(projUniform, 1, GL_FALSE, projection.m);
+    
+    glDrawElements(GL_TRIANGLE_STRIP, 6, GL_UNSIGNED_INT, 0);
+    glBindVertexArrayOES(0);
+    
+    
     [self presentFramebuffer];
     
 }
@@ -316,11 +381,11 @@
 
 #pragma mark - private methods
 +(void)loadImageWithName:(UIImage *)image1 bitmapData_p:(void **)bitmapData pixelsWide:(size_t *)pixelsWide_p pixelsHigh:(size_t *)pixelsHigh_p{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"1234" ofType:@"jpg"];
-//
-    UIImage *image = [[UIImage alloc] initWithContentsOfFile:path];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"1234" ofType:@"jpg"];
+////
+//    UIImage *image = [[UIImage alloc] initWithContentsOfFile:path];
     
-    CGImageRef cgimg = image.CGImage;
+    CGImageRef cgimg = image1.CGImage;
     
     CGContextRef bitmapContext = NULL;
     size_t pixelsWide;

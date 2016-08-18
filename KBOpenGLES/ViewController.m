@@ -16,6 +16,10 @@
     CADisplayLink *displayLink;
     GLuint texture;
     GLuint texture2;
+    
+    
+    GLuint texture3;
+    GLuint texture4;
 }
 
 @property(nonatomic,strong) CMAttitude *referenceAttitude;
@@ -33,6 +37,7 @@
     [self.view addSubview:glView2];
 
     texture2 = [glView2 rendImage:[UIImage imageNamed:@"1234.jpg"]];
+    texture4 = [glView2 rendImage:[UIImage imageNamed:@"1234.jpg"]];
 
     displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkPresent)];
     [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -41,6 +46,9 @@
     glView = [[KBOpenglView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:glView];
     texture = [glView rendImage:[UIImage imageNamed:@"1234.jpg"]];
+    
+    texture3 = [glView rendImage:[UIImage imageNamed:@"1234.jpg"]];
+
 
     
 }
@@ -74,8 +82,8 @@
 }
 
 -(void)displayLinkPresent{
-    [glView newFrameReadyAtTime:texture];
-    [glView2 newFrameReadyAtTime:texture2];
+    [glView newFrameReadyAtTime:texture text2:texture3];
+    [glView2 newFrameReadyAtTime:texture2 text2:texture4];
 
 }
 
